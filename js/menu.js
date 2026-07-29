@@ -1,30 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let menu_displayed = false;
-    let hmb_button = document.querySelector(".hmb-button") || document.querySelector("#menu-toggle");
-    let header_nav = document.querySelector("header nav");
-    let menu = document.querySelector("#menu");
+    const menuButton = document.querySelector('.hmb-button') || document.querySelector('#menu-toggle');
+    const mainMenu = document.querySelector('#menu');
+    const headerNav = document.querySelector('header nav');
 
-    if (!hmb_button || !header_nav || !menu) {
+    if (!menuButton || !mainMenu) {
         return;
     }
 
-    hmb_button.setAttribute("aria-expanded", "false");
+    // initialize
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Abrir menú');
+    if (menuButton.textContent === undefined || menuButton.textContent === null) {
+        // nothing
+    } else if (!menuButton.textContent.trim()) {
+        menuButton.textContent = '☰';
+    }
 
-    hmb_button.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+    const closeMenu = () => {
+        mainMenu.classList.remove('show');
+        if (headerNav) headerNav.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Abrir menú');
+        try { menuButton.textContent = '☰'; } catch (e) {}
+    };
 
-        if (!menu_displayed) {
-            header_nav.classList.remove("hidden");
-            menu.classList.add("show");
-            menu_displayed = true;
-        } else {
-            header_nav.classList.add("hidden");
-            menu.classList.remove("show");
-            menu_displayed = false;
+    menuButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const menuDisplayed = mainMenu.classList.toggle('show');
+        if (headerNav) headerNav.classList.toggle('hidden', !menuDisplayed);
+
+        menuButton.setAttribute('aria-expanded', String(menuDisplayed));
+        menuButton.setAttribute('aria-label', menuDisplayed ? 'Cerrar menú' : 'Abrir menú');
+        try { menuButton.textContent = menuDisplayed ? '×' : '☰'; } catch (e) {}
+    });
+
+    // close when any menu link is clicked
+    mainMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // close on large resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1025) {
+            closeMenu();
         }
-
-        hmb_button.setAttribute("aria-expanded", String(menu_displayed));
-        hmb_button.setAttribute("aria-label", menu_displayed ? "Cerrar menú" : "Abrir menú");
     });
 });
