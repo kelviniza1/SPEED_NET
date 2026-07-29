@@ -7,7 +7,8 @@ header{
 
 }
 
-#menu-toggle{
+#menu-toggle,
+.hmb-button{
 
     display:block;
 
@@ -16,6 +17,12 @@ header{
 nav{
 
     width:100%;
+
+}
+
+header nav.hidden{
+
+    display:none;
 
 }
 

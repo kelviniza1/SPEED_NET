@@ -237,7 +237,8 @@ footer p{
 
 /*================ MENÚ ================*/
 
-#menu-toggle{
+#menu-toggle,
+.hmb-button{
 
     display:none;
     background:none;
