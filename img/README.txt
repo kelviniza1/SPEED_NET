@@ -1,1 +1,0 @@
-Coloca aquí el logo con el nombre logo.png

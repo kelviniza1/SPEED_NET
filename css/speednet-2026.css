@@ -82,6 +82,7 @@ header{
 }
 
 header nav{
+    display:block;
     flex:1 1 auto;
     min-width:0;
     padding:8px;
@@ -93,16 +94,30 @@ header nav{
     scrollbar-width:none;
 }
 
+header nav.hidden{
+    display:block;
+}
+
 header nav::-webkit-scrollbar{
     display:none;
 }
 
 nav ul{
+    display:flex;
+    flex-direction:row;
     align-items:center;
     justify-content:flex-end;
     flex-wrap:nowrap;
     gap:5px;
     min-width:max-content;
+    width:auto;
+    margin-top:0;
+    animation:none;
+}
+
+nav ul li{
+    margin:0;
+    text-align:left;
 }
 
 nav ul li a{
@@ -133,6 +148,7 @@ nav ul li a.active{
 }
 
 .hmb-button{
+    display:none;
     width:44px;
     height:44px;
     border:1px solid var(--linea);
@@ -242,6 +258,10 @@ nav ul li a.active{
     border-radius:8px;
 }
 
+.hero-mark strong{
+    color:var(--blanco);
+}
+
 .eyebrow{
     display:block;
     margin-bottom:10px;
@@ -257,6 +277,7 @@ nav ul li a.active{
     font-size:72px;
     line-height:.96;
     letter-spacing:0;
+    color:var(--blanco);
 }
 
 .hero p{
@@ -858,6 +879,10 @@ footer p{
         flex-wrap:wrap;
     }
 
+    .hmb-button{
+        display:block;
+    }
+
     header nav{
         width:100%;
         padding:0;
@@ -867,12 +892,17 @@ footer p{
         overflow:visible;
     }
 
+    header nav.hidden{
+        display:none;
+    }
+
     nav ul li a{
         background:var(--gris-100);
         font-size:14px;
     }
 
     nav ul{
+        display:flex;
         min-width:0;
         flex-wrap:wrap;
     }
