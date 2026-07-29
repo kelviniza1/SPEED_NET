@@ -1,1 +1,122 @@
-<h1>Cobertura</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta la cobertura de internet y cable de Speednet en tu colonia.">
+    <title>Cobertura | Speednet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html" aria-label="Ir al inicio de Speednet">
+            <img src="img/Logo.PNG" alt="Speednet">
+        </a>
+        <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+        <nav aria-label="Navegación principal">
+            <ul id="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a class="active" href="cobertura.html" aria-current="page">Cobertura</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="preguntas.html">Preguntas</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="terminos.html">Términos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero compact-hero">
+            <div class="container">
+                <span class="eyebrow">Red Speednet</span>
+                <h1>Encuentra cobertura en tu colonia</h1>
+                <p>Estamos ampliando nuestra red para llevar internet simétrico, estable y con soporte cercano a más hogares.</p>
+            </div>
+        </section>
+
+        <section class="coverage-section">
+            <div class="container">
+                <div class="search-panel">
+                    <div>
+                        <span class="section-label">Consulta rápida</span>
+                        <h2>¿Ya llegamos a tu zona?</h2>
+                        <p>Escribe el nombre de tu colonia y comprueba la disponibilidad actual.</p>
+                    </div>
+                    <div class="search-control">
+                        <label for="coverage-search">Buscar colonia</label>
+                        <div class="search-input-wrap">
+                            <span aria-hidden="true">⌕</span>
+                            <input id="coverage-search" type="search" placeholder="Ejemplo: Santa Rosa" autocomplete="off">
+                            <button id="clear-search" type="button" aria-label="Limpiar búsqueda">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="coverage-status" class="coverage-status" role="status" aria-live="polite">
+                    <strong>13 colonias con cobertura actual</strong>
+                    <span>Selecciona una colonia para solicitar información.</span>
+                </div>
+
+                <div id="coverage-grid" class="coverage-grid">
+                    <article class="coverage-card" data-colonia="María Auxiliadora"><span class="coverage-dot"></span><h3>María Auxiliadora</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Mar%C3%ADa%20Auxiliadora." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Altos de Santa Rosa"><span class="coverage-dot"></span><h3>Altos de Santa Rosa</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Altos%20de%20Santa%20Rosa." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Emmanuel"><span class="coverage-dot"></span><h3>Emmanuel</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Emmanuel." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Tizatillo"><span class="coverage-dot"></span><h3>Tizatillo</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Tizatillo." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Florentino"><span class="coverage-dot"></span><h3>Florentino</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Florentino." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Carmelitas"><span class="coverage-dot"></span><h3>Carmelitas</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Carmelitas." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Santa Rosa"><span class="coverage-dot"></span><h3>Santa Rosa</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Santa%20Rosa." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Colinas"><span class="coverage-dot"></span><h3>Colinas</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Colinas." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Cruz Roja"><span class="coverage-dot"></span><h3>Cruz Roja</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Cruz%20Roja." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Santa Clara"><span class="coverage-dot"></span><h3>Santa Clara</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Santa%20Clara." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Jutes"><span class="coverage-dot"></span><h3>Jutes</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Jutes." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Reynel Fúnez"><span class="coverage-dot"></span><h3>Reynel Fúnez</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Reynel%20F%C3%BAnez." target="_blank" rel="noopener">Consultar</a></article>
+                    <article class="coverage-card" data-colonia="Villa Foresta"><span class="coverage-dot"></span><h3>Villa Foresta</h3><a href="https://wa.me/50487362897?text=Hola%20Speednet%2C%20deseo%20consultar%20cobertura%20en%20Villa%20Foresta." target="_blank" rel="noopener">Consultar</a></article>
+                </div>
+
+                <div id="no-coverage" class="no-results" hidden>
+                    <span class="no-results-icon" aria-hidden="true">?</span>
+                    <h3>Aún no aparece esa colonia</h3>
+                    <p>Escríbenos por WhatsApp. Nuestro equipo confirmará la cobertura y registrará tu interés para futuras expansiones.</p>
+                    <a id="coverage-whatsapp" class="btn btn-gold" href="https://wa.me/50487362897" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefit-strip">
+            <div class="container benefit-strip-grid">
+                <div><strong>100% simétrico</strong><span>Misma velocidad de subida y bajada</span></div>
+                <div><strong>Instalación gratis</strong><span>Promoción vigente</span></div>
+                <div><strong>Soporte rápido</strong><span>Atención técnica en menos de 24 horas</span></div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-card">
+                <div>
+                    <span class="eyebrow">Conéctate con Speednet</span>
+                    <h2>¿Tu colonia tiene cobertura?</h2>
+                    <p>Elige tu plan desde 40 hasta 200 megas y comienza tu solicitud por WhatsApp.</p>
+                </div>
+                <a class="btn btn-gold" href="contacto.html">Solicitar instalación</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand"><img src="img/Logo.PNG" alt=""><p>Internet y cable con atención cercana, velocidad real y servicio confiable.</p></div>
+            <div><h2>Contacto</h2><a href="tel:+50487362897">8736-2897</a><a href="https://wa.me/50487362897" target="_blank" rel="noopener">WhatsApp</a></div>
+            <div><h2>Horario</h2><p>Lunes a viernes: 8am - 5pm</p><p>Sábado: 8am - 1pm</p><p>Emergencias técnicas: 24/7</p></div>
+        </div>
+        <p class="copyright">© 2026 Speednet. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cobertura.js"></script>
+</body>
+</html>

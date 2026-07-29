@@ -1,88 +1,164 @@
-@media screen and (max-width:768px){
+/*
+    Diseño responsivo móvil primero
 
-header{
+    móvil       | tabletas      | escritorio    | pantallas amplias
+---------------< --------------< --------------< -----------------
+              720px          1025px          1400px
+*/
 
-    flex-wrap:wrap;
-    padding:15px 20px;
+@media (min-width: 720px) {
+    header {
+        padding: 12px 24px;
+    }
 
+    nav ul.show {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .compact-hero {
+        padding: 76px 0 82px;
+    }
+
+    .coverage-section,
+    .faq-section {
+        padding: 68px 0 72px;
+    }
+
+    .search-panel {
+        padding: 36px;
+    }
+
+    .coverage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-strip-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .benefit-strip-grid div,
+    .benefit-strip-grid div:first-child,
+    .benefit-strip-grid div:last-child {
+        padding: 5px 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.16);
+        border-bottom: 0;
+    }
+
+    .benefit-strip-grid div:first-child {
+        padding-left: 0;
+    }
+
+    .benefit-strip-grid div:last-child {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .faq-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-section {
+        padding: 66px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 42px;
+    }
+
+    .footer-grid > div:last-child {
+        grid-column: 1 / -1;
+    }
 }
 
-#menu-toggle{
+@media (min-width: 1025px) {
+    header {
+        flex-wrap: nowrap;
+        min-height: 92px;
+        padding: 12px clamp(30px, 4vw, 60px);
+    }
 
-    display:block;
+    .logo img {
+        width: 68px;
+        height: 68px;
+    }
 
+    #menu-toggle {
+        display: none;
+    }
+
+    header nav {
+        width: auto;
+        margin-left: auto;
+    }
+
+    nav ul,
+    nav ul.show {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 2px 5px;
+        max-height: none;
+        padding: 0;
+        overflow: visible;
+    }
+
+    nav ul li a {
+        padding: 8px 9px;
+        font-size: clamp(0.76rem, 0.9vw, 0.92rem);
+        text-align: left;
+    }
+
+    .search-panel {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 46px;
+        padding: 46px;
+    }
+
+    .coverage-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .faq-layout {
+        grid-template-columns: 300px minmax(0, 1fr);
+        gap: 64px;
+    }
+
+    .faq-aside {
+        position: sticky;
+        top: 120px;
+    }
+
+    .cta-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.4fr 0.7fr 1fr;
+        gap: 55px;
+    }
+
+    .footer-grid > div:last-child {
+        grid-column: auto;
+    }
 }
 
-nav{
-
-    width:100%;
-
+@media (min-width: 1400px) {
+    nav ul li a {
+        padding-inline: 11px;
+        font-size: 0.94rem;
+    }
 }
 
-nav ul{
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-    display:none;
-    flex-direction:column;
-    width:100%;
-    margin-top:20px;
-    animation:menu .35s ease;
-
-}
-
-nav ul.show{
-
-    display:flex;
-
-}
-
-nav ul li{
-
-    text-align:center;
-    margin:8px 0;
-
-}
-
-nav ul li a{
-
-    display:block;
-    padding:14px;
-
-}
-
-.hero{
-
-    padding:90px 20px;
-
-}
-
-.hero h1{
-
-    font-size:36px;
-
-}
-
-.hero p{
-
-    font-size:18px;
-
-}
-
-}
-
-@keyframes menu{
-
-from{
-
-opacity:0;
-transform:translateY(-15px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
 }
