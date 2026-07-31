@@ -1170,3 +1170,277 @@ footer p{
     color:var(--azul-700);
     background:transparent;
 }
+
+.banner-soporte{
+    background:linear-gradient(135deg,#0057c2,#0d74ff);
+    color:#fff;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.banner-soporte h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.banner-soporte p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.buscador{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.buscador input{
+    width:520px;
+    max-width:100%;
+    padding:16px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.buscador button{
+    padding:16px 28px;
+    border:none;
+    border-radius:8px;
+    background:#003b85;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.buscador button:hover{
+    background:#002b61;
+}
+
+.contenido-soporte{
+    padding:70px 0;
+    background:#f5f7fb;
+}
+
+.soporte-grid{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:45px;
+}
+
+.consultas h2{
+    color:#0057c2;
+    margin-bottom:20px;
+}
+
+.consultas ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.consultas li{
+    background:#fff;
+    margin-bottom:12px;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.consultas li:hover{
+    transform:translateX(6px);
+}
+
+.consultas a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    color:#333;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.consultas a:hover{
+    color:#0057c2;
+}
+
+.consultas i{
+    color:#0057c2;
+}
+
+
+/*=============================
+     INFORMACIÓN SPEEDNET
+=============================*/
+
+.info-speednet{
+    margin-top:35px;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.info-speednet h3{
+    color:#0057c2;
+    margin-bottom:15px;
+}
+
+.info-speednet h4{
+    margin-top:20px;
+    color:#0057c2;
+}
+
+.info-speednet p{
+    line-height:1.7;
+    color:#555;
+}
+
+.tarjetas-soporte{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.card-soporte{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.card-soporte:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card-soporte img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.card-body{
+
+    padding:25px;
+
+}
+
+.card-body h3{
+
+    color:#0057c2;
+
+    margin-bottom:15px;
+
+}
+
+.card-body p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    min-height:90px;
+
+}
+
+.card-body a{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    color:#0057c2;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.card-body a:hover{
+
+    text-decoration:underline;
+
+}
+
+@media(max-width:1100px){
+
+.soporte-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.tarjetas-soporte{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.banner-soporte h1{
+
+font-size:30px;
+
+}
+
+.banner-soporte p{
+
+font-size:16px;
+
+}
+
+.tarjetas-soporte{
+
+grid-template-columns:1fr;
+
+}
+
+.buscador{
+
+flex-direction:column;
+
+}
+
+.buscador button{
+
+width:100%;
+
+}
+
+.buscador input{
+
+width:100%;
+
+}
+
+}
