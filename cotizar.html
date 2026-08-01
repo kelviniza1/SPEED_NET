@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Cotiza o contrata tu plan de internet o cable SpeedNet. Sin Central de Riesgos, sin contratos amarrados e instalación gratis.">
+<title>SpeedNet - Cotizar / Contratar</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/speednet-2026.css">
+<link rel="stylesheet" href="css/formularios.css">
+</head>
+<body>
+<header>
+    <a class="brand" href="index.html" aria-label="SpeedNet inicio">
+        <img src="img/Logo.PNG" alt="SpeedNet">
+        <span>SpeedNet</span>
+    </a>
+
+    <button class="hmb-button" type="button" aria-label="Abrir menú">☰</button>
+
+    <nav class="hidden">
+        <ul id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="planes.html">Planes</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="cobertura.html">Cobertura</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a class="active" href="cotizar.html">Cotizar</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="preguntas.html">Preguntas</a></li>
+            <li><a href="testimonios.html">Testimonios</a></li>
+            <li><a href="avisos.html">Avisos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-layout">
+            <div class="hero-copy">
+                <div class="hero-mark">
+                    <img src="img/Logo.PNG" alt="SpeedNet">
+                    <strong>SpeedNet</strong>
+                </div>
+                <span class="eyebrow">Cotizar / Contratar</span>
+                <h1>Contrata internet simétrico en pocos minutos.</h1>
+                <p>Completa el formulario con tus datos y el plan que te interesa. Tu solicitud se envía directo a nuestro equipo por WhatsApp, sin necesidad de crear cuentas ni compartir datos en ningún sistema.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#form-cotizar-section">Cotizar ahora</a>
+                    <a class="btn btn-outline" href="planes.html">Ver todos los planes</a>
+                </div>
+            </div>
+            <figure class="hero-photo">
+                <img src="img/instalacion.jpg" alt="Técnico de SpeedNet realizando una instalación">
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="form-cotizar-section" data-reveal>
+    <div class="container">
+        <div class="contact-layout">
+
+            <article class="form-card">
+                <h2>Solicita tu cotización</h2>
+                <p>Nuestro equipo te contactará por WhatsApp para confirmar cobertura en tu colonia y coordinar la instalación.</p>
+
+                <form id="form-cotizar" novalidate>
+                    <div class="form-grid">
+
+                    
+                        <div class="form-hp" aria-hidden="true">
+                            <label for="cot-empresa">Empresa</label>
+                            <input type="text" id="cot-empresa" name="cot-empresa" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="cot-nombre">Nombre completo</label>
+                            <input type="text" id="cot-nombre" name="nombre" placeholder="Ej. María Fernández" autocomplete="name">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="cot-telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="cot-telefono" name="telefono" placeholder="9999-9999" autocomplete="tel">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="cot-plan">Plan que te interesa</label>
+                            <select id="cot-plan" name="plan">
+                                <option value="" selected>Selecciona un plan</option>
+                                <option value="40 megas - L750/mes">40 megas - L750/mes</option>
+                                <option value="50 megas - L850/mes">50 megas - L850/mes</option>
+                                <option value="60 megas - L950/mes">60 megas - L950/mes</option>
+                                <option value="100 megas - L1,150/mes">100 megas - L1,150/mes</option>
+                                <option value="150 megas - L1,250/mes">150 megas - L1,250/mes</option>
+                                <option value="200 megas - L1,450/mes">200 megas - L1,450/mes</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="cot-direccion">Dirección de instalación</label>
+                            <input type="text" id="cot-direccion" name="direccion" placeholder="Colonia, calle/bloque y punto de referencia" autocomplete="street-address">
+                        </div>
+
+                        <div class="form-field full">
+                            <label>Servicio que deseas</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="cot-servicio" value="Internet" checked>
+                                    <span>Internet</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cot-servicio" value="Cable">
+                                    <span>Cable</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="cot-servicio" value="Internet y Cable">
+                                    <span>Internet y Cable</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="cot-comentario">Comentario adicional <span class="opcional">(opcional)</span></label>
+                            <textarea id="cot-comentario" name="comentario" placeholder="Ej. disponibilidad de horario, referencias de la casa, etc."></textarea>
+                        </div>
+
+                        <div class="form-submit-msg" id="cot-resultado"></div>
+
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="submit">Enviar cotización por WhatsApp</button>
+                            <span class="form-note">No guardamos tus datos en ninguna base de datos: solo se abre WhatsApp con tu mensaje listo.</span>
+                        </div>
+
+                    </div>
+                </form>
+            </article>
+
+            <aside class="info-stack">
+                <div class="info-card">
+                    <span class="eyebrow">Todos los planes incluyen</span>
+                    <h3>Beneficios SpeedNet</h3>
+                    <p>Internet 100% simétrico</p>
+                    <p>Instalación GRATIS (promoción actual)</p>
+                    <p>Sin revisión en Central de Riesgos</p>
+                    <p>Cuota fija mensual, sin contratos amarrados</p>
+                    <p>Cancelación sin costo</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="eyebrow">Referencia rápida</span>
+                    <h3>Planes y precios</h3>
+                    <ul class="mini-plans">
+                        <li><span>40 megas</span><span>L750</span></li>
+                        <li><span>50 megas</span><span>L850</span></li>
+                        <li><span>60 megas</span><span>L950</span></li>
+                        <li><span>100 megas</span><span>L1,150</span></li>
+                        <li><span>150 megas</span><span>L1,250</span></li>
+                        <li><span>200 megas</span><span>L1,450</span></li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <span class="eyebrow">Atención directa</span>
+                    <h3>¿Prefieres escribirnos ya?</h3>
+                    <p>Lunes a Viernes: 8am - 5pm</p>
+                    <p>Sábado: 8am - 1pm</p>
+                    <a class="whatsapp-link" href="https://wa.me/50487362897" target="_blank" rel="noopener">WhatsApp: 8736-2897 →</a>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>SpeedNet</h3>
+                <p>Internet simétrico y cable para hogares hondureños.</p>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <p>WhatsApp: 8736-2897</p>
+                <p>Pagos por BAC o Ficohsa.</p>
+            </div>
+            <div>
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 8am - 5pm</p>
+                <p>Sábado: 8am - 1pm</p>
+                <p>Emergencias técnicas: 24/7</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/formularios.js"></script>
+<script src="js/speednet-2026.js"></script>
+</body>
+</html>
