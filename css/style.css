@@ -65,6 +65,10 @@ header{
     font-weight:bold;
 }
 
+.brand span{
+    display:none;
+}
+
 .brand img,
 .logo img{
     width:58px;
