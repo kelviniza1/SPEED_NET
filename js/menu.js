@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // initialize
+    // Se inicializa
     menuButton.setAttribute('aria-expanded', 'false');
     menuButton.setAttribute('aria-label', 'Abrir menú');
     if (menuButton.textContent === undefined || menuButton.textContent === null) {
-        // nothing
+        // no hace nada
     } else if (!menuButton.textContent.trim()) {
         menuButton.textContent = '☰';
     }
@@ -36,12 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
         try { menuButton.textContent = menuDisplayed ? '×' : '☰'; } catch (e) {}
     });
 
-    // close when any menu link is clicked
+    // para abrir los links
     mainMenu.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', closeMenu);
     });
 
-    // close on large resize
+    // es para hacerle resize al menu
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 1025) {
             closeMenu();
