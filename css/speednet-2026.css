@@ -328,7 +328,7 @@ h3{
         flex:1;
         min-width:0px;
     }
-    
+
 .plans-grid .plan-card,
 .benefits-grid .card,
 .service-grid .card,
@@ -930,11 +930,9 @@ footer p{
         min-width:0px;
     }
 
-    .plans-grid .plan-card,
-    .benefits-grid .card{
+     .plans-grid .plan-card{
         flex:1 1 30%;
     }
-
     .service-grid .card,
     .mv-grid .card,
     .info-grid .card{
