@@ -258,3 +258,14 @@
     font-weight: bold;
     
 }
+.form-error {
+    color: crimson;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.form-field input.error,
+.form-field select.error,
+.form-field textarea.error {
+    border-color: crimson;
+}

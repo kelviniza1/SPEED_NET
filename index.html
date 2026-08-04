@@ -1,52 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SpeedNet - Inicio</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Internet para tu hogar con planes accesibles y atención cercana.">
+    <title>SpeedNet - Inicio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="img/Logo.PNG" alt="SpeedNet">
-    </div>
-
-    <button id="menu-toggle">☰</button>
-
-    <nav>
-     <nav class="hidden">
+    <header>
+        <a class="logo" href="index.html" aria-label="Ir al inicio de SpeedNet">
+            <img src="img/Logo.PNG" alt="SpeedNet">
+        </a>
+            <button class="hmb-button" type="button" aria-label="Abrir menú">☰</button>
+    <nav class="hidden">
         <ul id="menu">
-            <li><a href="index.html">Inicio</a></li>
+            <li><a class="active" href="index.html">Inicio</a></li>
             <li><a href="planes.html">Planes</a></li>
             <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="promociones.html">Promociones</a></li>
             <li><a href="cobertura.html">Cobertura</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="cotizar.html">Cotizar</a></li>
             <li><a href="soporte.html">Soporte</a></li>
             <li><a href="preguntas.html">Preguntas</a></li>
-            <li><a href="testimonios.html">Testimonios</a></li>
             <li><a href="avisos.html">Avisos</a></li>
-            <li><a href="terminos.html">Términos</a></li>
         </ul>
     </nav>
-</header>
+    </header>
 
-<section class="hero">
-<h1>Bienvenido a SpeedNet</h1>
-<p>Internet rápido y confiable.</p>
-<a class="btn" href="contacto.html">Cotiza ya</a>
-</section>
+    <main>
+        <div class="carusel">
+            <div class="carusel-lane">
+                <section class="home-hero slide-inicio">
+                    <div class="container home-hero-content">
+                        <span class="eyebrow">Internet para tu hogar</span>
+                        <h1>Conéctate fácil con SpeedNet</h1>
+                        <p>Planes de internet para estudiar, trabajar y disfrutar en familia.</p>
+                        <div class="home-buttons"><a class="btn btn-gold" href="planes.html">Ver planes</a></div>
+                    </div>
+                </section>
+                <section class="home-hero slide-cobertura">
+                    <div class="container home-hero-content">
+                        <span class="eyebrow">Consulta tu zona</span>
+                        <h1>Encuentra cobertura cerca de ti</h1>
+                        <p>Busca tu colonia y solicita información de forma rápida.</p>
+                        <div class="home-buttons"><a class="btn btn-light" href="cobertura.html">Consultar cobertura</a></div>
+                    </div>
+                </section>
+                <section class="home-hero slide-soporte">
+                    <div class="container home-hero-content">
+                        <span class="eyebrow">Estamos para ayudarte</span>
+                        <h1>Soporte cuando lo necesites</h1>
+                        <p>Consulta respuestas y comunícate con nuestro equipo.</p>
+                        <div class="home-buttons"><a class="btn btn-gold" href="soporte.html">Ir a soporte</a></div>
+                    </div>
+                </section>
+            </div>
+        </div>
 
-<footer>
-<p>Teléfono: +504 8736-2897<p>
-<p>Horario: Lun-Sáb 8:00 AM - 5:00 PM</p>
-<p>WhatsApp</p>
+        <section class="home-section">
+            <div class="container">
+                <div class="home-heading">
+                    <span class="section-label">¿Por qué elegirnos?</span>
+                    <h2>Un servicio simple y cercano</h2>
+                    <p>Te ayudamos a encontrar una opción adecuada para tu hogar.</p>
+                </div>
+
+                <div class="home-grid">
+                    <article class="home-card">
+                        <span class="home-icon">01</span>
+                        <h3>Buena velocidad</h3>
+                        <p>Planes para navegar, ver videos, estudiar y trabajar.</p>
+                    </article>
+                    <article class="home-card">
+                        <span class="home-icon">02</span>
+                        <h3>Atención cercana</h3>
+                        <p>Puedes comunicarte con nosotros fácilmente por WhatsApp.</p>
+                    </article>
+                    <article class="home-card">
+                        <span class="home-icon">03</span>
+                        <h3>Soporte técnico</h3>
+                        <p>Te ayudamos cuando tengas problemas con tu conexión.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section section-alt">
+            <div class="container">
+                <div class="home-heading">
+                    <span class="section-label">Mantente informado</span>
+                    <h2>Avisos recientes</h2>
+                    <p>Consulta las novedades y trabajos programados de nuestra red.</p>
+                </div>
+
+                <div class="home-grid">
+                    <article class="home-card">
+                        <span class="home-icon">30</span>
+                        <h3>Mantenimiento preventivo</h3>
+                        <p><strong>30 de julio de 2026</strong></p>
+                        <p>Trabajos de mejora en la red de la colonia Kennedy.</p>
+                        <a href="avisos.html">Leer aviso</a>
+                    </article>
+                    <article class="home-card">
+                        <span class="home-icon">02</span>
+                        <h3>Corte programado</h3>
+                        <p><strong>2 de agosto de 2026</strong></p>
+                        <p>Interrupción temporal del servicio en la colonia Miraflores.</p>
+                        <a href="avisos.html">Leer aviso</a>
+                    </article>
+                    <article class="home-card">
+                        <span class="home-icon">05</span>
+                        <h3>Mejora de la red</h3>
+                        <p><strong>5 de agosto de 2026</strong></p>
+                        <p>Actualización de equipos en la colonia Hato de Enmedio.</p>
+                        <a href="avisos.html">Leer aviso</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-card">
+                <div>
+                    <span class="eyebrow">Comienza hoy</span>
+                    <h2>¿Quieres internet para tu hogar?</h2>
+                    <p>Consulta la cobertura disponible y solicita información.</p>
+                </div>
+                <a class="btn btn-gold" href="cotizar.html">Quiero cotizar</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <img class="footer-logo" src="img/Logo.PNG" alt="Logotipo de SpeedNet">
+            <p>Internet y cable con atención cercana y servicio confiable.</p>
+        </div>
+        <div>
+            <h2>Contacto</h2>
+            <a href="tel:+50487362897">8736-2897</a>
+            <a href="https://wa.me/50487362897" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div>
+            <h2>Horario</h2>
+            <p>Lunes a viernes: 8am - 5pm</p>
+            <p>Sábado: 8am - 1pm</p>
+            <p>Emergencias técnicas: 24/7</p>
+        </div>
+    </div>
+    <p class="copyright">© 2026 SpeedNet. Todos los derechos reservados.</p>
 </footer>
 
-<script src="js/menu.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/carusel.js"></script>
 </body>
 </html>

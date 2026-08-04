@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>SpeedNet - Servicios</title>
+<meta name="description" content="Conoce los servicios de internet, cable y soporte ofrecidos por SpeedNet.">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/speednet-2026.css">
@@ -15,23 +16,19 @@
         <span>SpeedNet</span>
     </a>
 
-    <button class="hmb-button" type="button" aria-label="Abrir menú">☰</button>
-
+        <button class="hmb-button" type="button" aria-label="Abrir menú">☰</button>
     <nav class="hidden">
         <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="planes.html">Planes</a></li>
-            <li><a class="active"href="servicios.html">Servicios</a></li>
-            <li><a href="promociones.html">Promociones</a></li>
+            <li><a class="active" href="servicios.html">Servicios</a></li>
             <li><a href="cobertura.html">Cobertura</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="cotizar.html">Cotizar</a></li>
             <li><a href="soporte.html">Soporte</a></li>
             <li><a href="preguntas.html">Preguntas</a></li>
-            <li><a href="testimonios.html">Testimonios</a></li>
             <li><a href="avisos.html">Avisos</a></li>
-            <li><a href="terminos.html">Términos</a></li>
         </ul>
     </nav>
 </header>
@@ -39,142 +36,28 @@
 <main id="contenido"></main>
 
 <footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <h3>SpeedNet</h3>
-                <p>Internet simétrico y cable para hogares hondureños.</p>
-            </div>
-            <div>
-                <h3>Contacto</h3>
-                <p>WhatsApp: 8736-2897</p>
-                <p>Pagos por BAC o Ficohsa.</p>
-            </div>
-            <div>
-                <h3>Horario</h3>
-                <p>Lunes a Viernes: 8am - 5pm</p>
-                <p>Sábado: 8am - 1pm</p>
-                <p>Emergencias técnicas: 24/7</p>
-            </div>
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <img class="footer-logo" src="img/Logo.PNG" alt="Logotipo de SpeedNet">
+            <p>Internet y cable con atención cercana y servicio confiable.</p>
+        </div>
+        <div>
+            <h2>Contacto</h2>
+            <a href="tel:+50487362897">8736-2897</a>
+            <a href="https://wa.me/50487362897" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div>
+            <h2>Horario</h2>
+            <p>Lunes a viernes: 8am - 5pm</p>
+            <p>Sábado: 8am - 1pm</p>
+            <p>Emergencias técnicas: 24/7</p>
         </div>
     </div>
+    <p class="copyright">© 2026 SpeedNet. Todos los derechos reservados.</p>
 </footer>
 
 <script src="js/menu.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const contenido = document.getElementById("contenido");
-
-    const servicios = [
-        {
-            etiqueta: "Servicio principal",
-            titulo: "Internet residencial simétrico",
-            texto: "Planes desde 40 hasta 200 megas, diseñados para estudiar, trabajar desde casa, ver streaming, jugar en línea y conectar varios dispositivos.",
-            puntos: ["Misma velocidad de subida y bajada", "Conexión estable para el hogar", "Soporte técnico en menos de 24 horas", "Instalación gratis por promoción actual"]
-        },
-        {
-            etiqueta: "Servicio adicional",
-            titulo: "Cable",
-            texto: "Servicio de cable para complementar la experiencia del hogar junto al internet SpeedNet.",
-            puntos: ["Consulta disponibilidad según zona", "Atención por WhatsApp", "Servicio pensado para uso familiar"]
-        }
-    ];
-
-    const beneficios = [
-        { titulo: "Internet 100% simétrico", texto: "Megas reales con igual subida y bajada." },
-        { titulo: "Sin contratos amarrados", texto: "Contratación simple y transparente." },
-        { titulo: "Sin Central de Riesgos", texto: "No se revisa historial crediticio." },
-        { titulo: "Cuota fija mensual", texto: "Pagos claros cada mes." }
-    ];
-
-    let serviciosHTML = "";
-    for (let i = 0; i < servicios.length; i++) {
-        let puntosHTML = "";
-        for (let j = 0; j < servicios[i].puntos.length; j++) {
-            puntosHTML += `<li>${servicios[i].puntos[j]}</li>`;
-        }
-
-        serviciosHTML += `
-            <article class="card image-card" data-reveal>
-                <img src="${i === 0 ? "img/servicios-tecnico.jpg" : "img/servicios-cable.jpg"}" alt="${i === 0 ? "Técnico revisando equipo de internet" : "Control remoto para servicio de cable"}">
-                <div class="image-card-content">
-                <span class="eyebrow">${servicios[i].etiqueta}</span>
-                <h2>${servicios[i].titulo}</h2>
-                <p>${servicios[i].texto}</p>
-                <ul class="service-list">
-                    ${puntosHTML}
-                </ul>
-                </div>
-            </article>
-        `;
-    }
-
-    let beneficiosHTML = "";
-    for (let i = 0; i < beneficios.length; i++) {
-        beneficiosHTML += `
-            <article class="card" data-reveal>
-                <strong>${beneficios[i].titulo}</strong>
-                <p>${beneficios[i].texto}</p>
-            </article>
-        `;
-    }
-
-    contenido.innerHTML = `
-        <section class="hero">
-            <div class="container">
-                <div class="hero-layout">
-                    <div class="hero-copy">
-                        <div class="hero-mark">
-                            <img src="img/Logo.PNG" alt="SpeedNet">
-                            <strong>SpeedNet</strong>
-                        </div>
-                        <span class="eyebrow">Servicios</span>
-                        <h1>Internet y cable para mantener tu hogar conectado.</h1>
-                        <p>SpeedNet ofrece soluciones residenciales enfocadas en estabilidad, megas reales y atención personalizada.</p>
-                        <div class="hero-actions">
-                            <a class="btn btn-primary" href="contacto.html">Cotizar servicio</a>
-                            <a class="btn btn-outline" href="planes.html">Ver planes</a>
-                        </div>
-                    </div>
-                    <figure class="hero-photo">
-                        <img src="img/servicios-fibra.jpg" alt="Conexiones de fibra óptica">
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="marquee" aria-label="Servicios SpeedNet">
-            <div class="marquee-track">
-                <span>Internet residencial</span>
-                <span>Cable</span>
-                <span>Soporte en menos de 24h</span>
-                <span>Instalación gratis</span>
-                <span>Atención por WhatsApp</span>
-                <span>Internet residencial</span>
-
-            </div>
-        </section>
-
-        <section class="section" data-reveal>
-            <div class="container service-grid">
-                ${serviciosHTML}
-            </div>
-        </section>
-
-        <section class="section section-alt" data-reveal>
-            <div class="container">
-                <div class="section-header">
-                    <h2>Beneficios incluidos</h2>
-                    <p>Condiciones claras para clientes nuevos y actuales.</p>
-                </div>
-                <div class="benefits-grid">
-                    ${beneficiosHTML}
-                </div>
-            </div>
-        </section>
-    `;
-});
-</script>
+<script src="js/servicios.js"></script>
 <script src="js/speednet-2026.js"></script>
 </body>
 </html>

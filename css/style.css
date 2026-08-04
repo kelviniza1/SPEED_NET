@@ -1,223 +1,131 @@
 :root{
-    --azulOscuro:#071A5A;
-    --azulPrincipal:#0D5BD7;
-    --azulClaro:#1FA3FF;
-    --blanco:#FFFFFF;
-    --gris:#F5F7FA;
-    --texto:#1F2937;
+    --azul:#0d5bd7;
+    --azul-oscuro:#071a5a;
+    --celeste:#eaf3ff;
+    --amarillo:#f2c94c;
+    --blanco:#ffffff;
+    --gris:#f5f7fa;
+    --texto:#263238;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:var(--gris);color:var(--texto);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--azul)}
+.container{width:90%;max-width:1100px;margin:auto}
+
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--azul-oscuro);padding:12px 2%}
+.logo,.brand{display:flex;align-items:center;gap:10px;color:white;text-decoration:none;font-weight:bold}
+.logo img,.brand img{width:55px;height:55px;object-fit:contain;background:white;border-radius:8px}
+nav ul{display:flex;flex-wrap:nowrap;justify-content:center;gap:3px;list-style:none}
+nav a{display:block;color:white;text-decoration:none;font-size:15px;font-weight:bold;padding:9px 8px;border-radius:5px}
+nav a:hover,nav a.active{background:var(--azul)}
+#menu-toggle,.hmb-button{display:none;background:transparent;border:0;color:white;font-size:30px;cursor:pointer}
+
+.hero{min-height:480px;display:flex;align-items:center;text-align:center;color:white;background:linear-gradient(rgba(7,26,90,.88),rgba(13,91,215,.82)),url("../img/wifi.jpg") center/cover}
+.hero h1{font-size:48px;line-height:1.15;margin:14px 0}
+.hero p{font-size:19px;margin-bottom:22px}
+.btn{display:inline-block;padding:11px 22px;border:2px solid var(--azul);border-radius:7px;background:var(--azul);color:white;text-decoration:none;font-weight:bold;cursor:pointer}
+.btn:hover{opacity:.9}
+.btn-yellow{background:var(--amarillo);border-color:var(--amarillo);color:var(--azul-oscuro)}
+.btn-light{background:white;border-color:white;color:var(--azul)}
+
+.section{padding:60px 0}
+.section-alt{background:var(--celeste)}
+.card{background:white;border:1px solid #dbe4ee;border-radius:12px;padding:25px}
+.card h2,.card h3{color:var(--azul-oscuro);margin-bottom:10px}
+.card img{width:100%;height:190px;object-fit:cover;border-radius:8px;margin-bottom:15px}
+
+.faq-item{background:white;border:1px solid #dbe4ee;border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-item summary{padding:17px 20px;color:var(--azul-oscuro);font-weight:bold;cursor:pointer}
+.faq-item div{padding:0 20px 18px}
+
+footer{background:var(--azul-oscuro);color:white;padding:35px 0 20px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer h2{font-size:18px;margin-bottom:10px}
+footer a{display:block;color:white}
+.footer-brand{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.footer-brand .footer-logo{width:50px;height:50px;object-fit:contain;padding:4px;background:white;border-radius:7px}
+.copyright{text-align:center;margin-top:25px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2)}
+
+/* Inicio */
+.home-hero{min-height:520px;display:flex;align-items:center;text-align:center;color:white;background:linear-gradient(rgba(7,26,90,.88),rgba(13,91,215,.82)),url("../img/wifi.jpg") center/cover}
+.home-hero-content{max-width:760px}
+.home-hero h1{font-size:52px;line-height:1.15;margin:15px 0}
+.home-hero p{font-size:20px;margin-bottom:25px}
+.home-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-light{background:white;border-color:white;color:var(--azul)}
+.home-section{padding:65px 0}
+.home-heading{max-width:650px;margin:0 auto 35px;text-align:center}
+.home-heading h2{margin:8px 0;color:var(--azul-oscuro)}
+.home-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.home-card{background:white;border:1px solid #dbe4ee;border-radius:12px;padding:28px;text-align:center}
+.home-card h3{color:var(--azul-oscuro);margin-bottom:8px}
+.home-icon{display:grid;place-items:center;width:48px;height:48px;margin:0 auto 15px;border-radius:50%;background:var(--celeste);color:var(--azul);font-weight:bold}
+
+/* Carrusel basado en el ejercicio visto en clase */
+.carusel{position:relative;width:100vw;height:520px;overflow:hidden}
+.carusel .carusel-lane{display:flex;transition:transform 1s ease}
+.carusel .carusel-lane>section{width:100vw;height:520px;flex-shrink:0}
+.carusel .carusel-btn{display:flex;justify-content:center;align-items:center;position:absolute;width:3rem;height:6rem;font-size:1.2rem;font-weight:bolder;top:50%;background-color:rgba(255,255,255,.85);color:var(--azul-oscuro);transform:translateY(-50%);cursor:pointer}
+.carusel .carusel-btn-left{left:0}
+.carusel .carusel-btn-right{right:0}
+.carusel .carusel-idx-btns{position:absolute;padding:1rem;bottom:0;left:50%;transform:translateX(-50%);display:flex;gap:.5rem}
+.carusel .carusel-idx-btn{width:2rem;height:7px;border-radius:3px;background-color:#ccc;cursor:pointer}
+.carusel .carusel-idx-btn.active{background-color:var(--amarillo)}
+.slide-inicio{background:linear-gradient(rgba(7,26,90,.88),rgba(13,91,215,.82)),url("../img/wifi.jpg") center/cover}
+.slide-cobertura{background:linear-gradient(rgba(7,26,90,.88),rgba(13,91,215,.82)),url("../img/cobertura.jpg") center/cover}
+.slide-soporte{background:linear-gradient(rgba(7,26,90,.88),rgba(13,91,215,.82)),url("../img/soporte-tecnico.jpg") center/cover}
+
+/* Cobertura */
+.page-hero{background:linear-gradient(135deg,var(--azul-oscuro),var(--azul));color:white;text-align:center;padding:70px 20px}
+.page-hero .container{max-width:800px}
+.page-hero h1{font-size:42px;margin:10px 0 15px}
+.page-hero p{font-size:18px}
+.eyebrow,.section-label{color:#1fa3ff;font-size:14px;font-weight:bold;text-transform:uppercase;letter-spacing:1px}
+.coverage-section,.faq-section{padding:60px 0}
+.search-panel{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;background:white;border-radius:14px;padding:30px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.search-panel h2{text-align:left;margin:8px 0;color:var(--azul-oscuro)}
+.search-control label{display:block;font-weight:bold;margin-bottom:8px}
+.search-input-wrap{display:flex;align-items:center;gap:8px;border:1px solid #cbd5e1;border-radius:8px;padding:8px 10px}
+.search-input-wrap input{flex:1;min-width:0;border:0;outline:0;font-size:16px}
+.search-input-wrap button{border:0;border-radius:6px;background:var(--celeste);color:var(--azul);padding:8px 12px;cursor:pointer}
+.coverage-status{display:flex;justify-content:space-between;gap:15px;margin:25px 0 15px;padding:15px 18px;background:var(--celeste);border-left:4px solid var(--azul);border-radius:6px}
+.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.coverage-card{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:center;background:white;border:1px solid #dbe4ee;border-radius:10px;padding:18px}
+.coverage-card h3{margin:0;color:var(--azul-oscuro)}
+.coverage-card a{grid-column:2;font-weight:bold;text-decoration:none}
+.coverage-dot{width:10px;height:10px;border-radius:50%;background:#22c55e}
+.no-results{margin-top:20px;background:white;border-radius:12px;padding:30px;text-align:center}
+.benefit-strip{background:var(--azul-oscuro);color:white;padding:28px 0}
+.benefit-strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.benefit-strip-grid strong,.benefit-strip-grid span{display:block}
+.benefit-strip-grid span{font-size:14px;color:#dbeafe}
+
+/* Preguntas */
+.faq-layout{display:grid;grid-template-columns:280px 1fr;gap:35px;align-items:start}
+.faq-aside{background:white;border-radius:12px;padding:25px;border:1px solid #dbe4ee}
+.faq-aside h2{text-align:left;margin:8px 0;color:var(--azul-oscuro)}
+.faq-categories{display:flex;flex-direction:column;gap:8px;margin:20px 0}
+.faq-categories a{color:#334155;text-decoration:none;padding:9px 10px;border-radius:6px;background:#f1f5f9}
+.help-card{background:var(--azul-oscuro);color:white;border-radius:9px;padding:18px}
+.help-card span,.help-card strong,.help-card a{display:block;margin-bottom:7px}
+.help-card a{color:var(--amarillo)}
+.faq-group{margin-bottom:35px}
+.faq-group-heading{display:flex;align-items:center;gap:15px;margin-bottom:12px}
+.faq-group-heading>span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--azul);color:white;font-weight:bold}
+.faq-group-heading p,.faq-group-heading h2{margin:0;text-align:left}
+.faq-item summary{color:var(--azul-oscuro)}
+
+@media(max-width:800px){
+    .home-hero h1,.page-hero h1{font-size:36px}
+    .home-grid,.search-panel,.faq-layout{grid-template-columns:1fr}
+    .coverage-grid{grid-template-columns:1fr 1fr}
+    .benefit-strip-grid{grid-template-columns:1fr}
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    font-family:Arial, Helvetica, sans-serif;
-    background:var(--gris);
-    color:var(--texto);
-    line-height:1.6;
-}
-
-section{
-    flex:1;
-    padding:60px 0;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-header{
-    background:var(--azulOscuro);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:var(--blanco);
-    text-decoration:none;
-    font-size:22px;
-    font-weight:bold;
-}
-
-.brand span{
-    display:none;
-}
-
-.brand img,
-.logo img{
-    width:58px;
-    height:58px;
-    object-fit:contain;
-    padding:6px;
-    background:var(--blanco);
-    border:1px solid var(--azulClaro);
-    border-radius:10px;
-}
-
-nav ul{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    list-style:none;
-    gap:8px;
-}
-nav ul li{
-    position:relative;
-}
-
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-size:17px;
-    font-weight:bold;
-    padding:10px 15px;
-    display:block;
-    transition:.35s;
-    position:relative;
-}
-
-nav ul li a::after{
-    content:"";
-    position:absolute;
-    left:50%;
-    bottom:5px;
-    width:0%;
-    height:3px;
-    background:var(--azulClaro);
-    transition:.35s;
-    transform:translateX(-50%);
-    border-radius:5px;
-}
-nav ul li a:hover::after{
-    width:75%;
-}
-
-nav ul li a:hover{
-    color:var(--azulClaro);
-    transform:translateY(-3px);
-}
-
-nav ul li a.active{
-    color:var(--azulClaro);
-}
-
-nav ul li a.active::after{
-    width:75%;
-}
-
-.hero{
-    background:linear-gradient(135deg,var(--azulOscuro),var(--azulPrincipal));
-    color:white;
-    text-align:center;
-    padding:120px 20px;
-}
-
-.hero h1{
-    font-size:52px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:21px;
-    margin-bottom:35px;
-}
-
-.btn{
-    display:inline-block;
-    background:white;
-    color:var(--azulPrincipal);
-    padding:15px 35px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    border:2px solid white;
-}
-
-.card{
-    background:white;
-    border-radius:12px;
-    padding:20px;
-    box-shadow:0 10px 20px rgba(0,0,0,.12);
-}
-
-h2{
-    color:var(--azulOscuro);
-    margin-bottom:25px;
-    text-align:center;
-}
-
-footer{
-    margin-top:auto;
-    background:var(--azulOscuro);
-    color:white;
-    text-align:center;
-    padding:35px;
-    box-shadow:0 -5px 20px rgba(0,0,0,.15);
-}
-
-footer p{
-    margin:8px 0;
-}
-
-#menu-toggle,
-.hmb-button{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:35px;
-    cursor:pointer;
-}
-
-@media (max-width:1450px){
-    header{
-        flex-wrap:wrap;
-        gap:10px;
-        padding:15px 20px;
-    }
-
-    #menu-toggle,
-    .hmb-button{
-        display:block;
-    }
-
-    nav{
-        width:100%;
-    }
-
-    nav.hidden{
-        display:none;
-    }
-
-    nav ul{
-        flex-direction:column;
-        gap:8px;
-    }
+@media(max-width:520px){
+    .coverage-grid{grid-template-columns:1fr}
+    .coverage-status{display:block}
 }
