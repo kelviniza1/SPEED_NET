@@ -6,103 +6,6 @@ body{
     font-family:"Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-header{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:1.75rem;
-    padding:0.75rem 4%;
-    background-color:#FFFFFF;
-    border-bottom:1px solid #D8E2EE;
-    box-shadow:0px 18px 50px rgba(7,22,47,0.08);
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:0.625rem;
-    color:#07162F;
-    text-decoration:none;
-    font-weight:800;
-}
-
-.brand img{
-    display:block;
-    width:3.625rem;
-    height:3.625rem;
-    object-fit:contain;
-    padding:0.3rem;
-    background-color:#FFFFFF;
-    border:1px solid #D8E2EE;
-    border-radius:8px;
-    box-shadow:0px 12px 28px rgba(7,22,47,0.08);
-}
-
-.brand span{
-    display:none;
-    font-size:1.375rem;
-}
-
-header .hmb-button{
-    display:flex;
-    position:static;
-    width:2.75rem;
-    height:2.75rem;
-    border:1px solid #D8E2EE;
-    border-radius:8px;
-    background-color:#07162F;
-    color:#FFFFFF;
-    font-size:1.7rem;
-}
-
-header nav{
-    width:100%;
-    padding:0px;
-    border:0px;
-    background-color:transparent;
-    box-shadow:none;
-}
-
-header nav.hidden{
-    display:none;
-}
-
-header nav ul{
-    display:flex;
-    flex-direction:column;
-    flex-wrap:wrap;
-    gap:0.5rem;
-    width:100%;
-    padding:0px;
-    margin:0px;
-    list-style:none;
-}
-
-header nav ul li{
-    width:100%;
-    margin:0px;
-    text-align:left;
-}
-
-header nav ul li a{
-    display:inline-block;
-    width:100%;
-    padding:0.7rem 0.75rem;
-    border:0px;
-    border-radius:8px;
-    background-color:#EDF2F7;
-    color:#07162F;
-    font-size:0.875rem;
-    text-decoration:none;
-}
-
-header nav ul li a.active{
-    color:#145DA0;
-    background-color:#FFFFFF;
-    border-bottom:3px solid #C9A24D;
-    box-shadow:0px 14px 30px rgba(7,22,47,0.13);
-}
-
 .container{
     width:92%;
     max-width:73.75rem;
@@ -114,6 +17,7 @@ header nav ul li a.active{
     align-items:center;
     min-height:80vh;
     padding:4.5rem 0px;
+    text-align:left;
     background-color:#07162F;
     background-image:
         linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px),
@@ -190,6 +94,7 @@ header nav ul li a.active{
 
 .hero h1{
     max-width:51.25rem;
+    margin-bottom:1.25rem;
     font-size:2.125rem;
     line-height:1.1;
     color:#FFFFFF;
@@ -197,6 +102,7 @@ header nav ul li a.active{
 
 .hero p{
     max-width:45rem;
+    margin-bottom:1.75rem;
     color:#FFFFFF;
     font-size:1.25rem;
 }
@@ -224,6 +130,7 @@ header nav ul li a.active{
 }
 
 .btn-primary{
+    background-color:#EAD08A;
     background-image:linear-gradient(#EAD08A,#C9A24D);
     color:#07162F;
 }
@@ -231,6 +138,7 @@ header nav ul li a.active{
 .btn-outline{
     border-color:#FFFFFF;
     background-color:transparent;
+    background-image:none;
     color:#FFFFFF;
 }
 
@@ -290,12 +198,18 @@ h3{
     display:block;
     width:100%;
     max-width:100%;
-    height:14.375rem;
+    height:12rem;
     object-fit:cover;
 }
 
 .image-card-content{
     padding:1.5rem;
+}
+
+.image-card-content h2,
+.mv-grid .card h2{
+    font-size:1.375rem;
+    text-align:left;
 }
 
 .media-band{
@@ -324,16 +238,11 @@ h3{
     gap:1.375rem;
 }
 
-.footer-grid div{
-        flex:1;
-        min-width:0px;
-    }
-
 .plans-grid .plan-card,
 .benefits-grid .card,
 .service-grid .card,
 .mv-grid .card,
-.footer-col{
+.footer-grid div{
     flex:1 1 100%;
     min-width:0px;
 }
@@ -380,10 +289,18 @@ h3{
     font-weight:600;
 }
 
+.plan-card .btn,
+.benefits-grid .card .btn{
+    width:auto;
+    min-height:auto;
+    padding:0.6rem 1.25rem;
+    border-radius:8px;
+}
+
 .benefits-grid .card{
     display:flex;
     flex-direction:column;
-    justify-content:flex-end;
+    justify-content:center;
     padding:2.125rem;
     border-bottom:4px solid #145DA0;
 }
@@ -418,8 +335,8 @@ h3{
 .service-grid .card .btn-outline,
 .mv-grid .card .btn-outline{
     border-color:#145DA0;
-    color:#145DA0;
     background-color:transparent;
+    color:#145DA0;
 }
 
 .service-list{
@@ -433,6 +350,7 @@ h3{
 footer{
     padding:2.875rem 0px 1.5rem 0px;
     background-color:#07162F;
+    text-align:left;
 }
 
 footer h3{
@@ -470,7 +388,7 @@ footer p{
 }
 
 .banner-soporte{
-    padding:4.375rem 1.25rem;
+    padding:5.5rem 1.25rem 4.375rem 1.25rem;
     background-image:linear-gradient(#0057c2,#0d74ff);
     color:#fff;
     text-align:center;
@@ -525,6 +443,7 @@ footer p{
 .soporte-grid{
     display:flex;
     flex-direction:column-reverse;
+    align-items:stretch;
     gap:2.8rem;
 }
 
@@ -578,11 +497,6 @@ footer p{
     color:#0057c2;
 }
 
-.info-speednet h4{
-    margin-top:1.25rem;
-    color:#0057c2;
-}
-
 .info-speednet p{
     line-height:1.7;
     color:#555;
@@ -591,6 +505,7 @@ footer p{
 .tarjetas-soporte{
     display:flex;
     flex-wrap:wrap;
+    align-content:flex-start;
     gap:1.875rem;
 }
 
@@ -790,10 +705,6 @@ footer p{
 }
 
 @media (min-width:720px){
-    .brand span{
-        display:inline-block;
-    }
-
     .section{
         padding:5.125rem 0px;
     }
@@ -845,49 +756,6 @@ footer p{
 }
 
 @media (min-width:1025px){
-    header{
-        flex-direction:row;
-        align-items:center;
-        flex-wrap:nowrap;
-    }
-
-    header .hmb-button{
-        display:none;
-    }
-
-    header nav{
-        display:block;
-        flex:1;
-        min-width:0px;
-        padding:0.5rem;
-        border:1px solid #D8E2EE;
-        border-radius:8px;
-        background-color:#F2F7FC;
-    }
-
-    header nav.hidden{
-        display:block;
-    }
-
-    header nav ul{
-        flex-direction:row;
-        align-items:center;
-        justify-content:flex-end;
-        flex-wrap:wrap;
-        gap:5px;
-        width:auto;
-    }
-
-    header nav ul li{
-        width:auto;
-    }
-
-    header nav ul li a{
-        width:auto;
-        background-color:transparent;
-        font-size:0.8rem;
-    }
-
     h2{
         font-size:2.875rem;
     }
@@ -896,11 +764,6 @@ footer p{
     .media-band{
         flex-direction:row;
         align-items:center;
-    }
-
-    .media-band div{
-        flex:1;
-        min-width:0px;
     }
 
     .hero-copy{
@@ -919,26 +782,31 @@ footer p{
         min-width:0px;
     }
 
-    .media-band-copy{
+    .media-band div{
         flex:1;
         min-width:0px;
     }
 
-    .footer-col{
+    .footer-grid div{
         flex:1;
         min-width:0px;
     }
 
-     .plans-grid .plan-card{
+    .plans-grid .plan-card{
         flex:1 1 30%;
     }
-    .benefits-grid .card{
+
+    .benefits-grid .card,
+    .info-grid .card{
         flex:1 1 22%;
     }
-    .service-grid .card,
-    .mv-grid .card,
-    .info-grid .card{
-        flex:1 1 30%;
+
+    .service-grid .card{
+        flex:1 1 45%;
+    }
+
+    .mv-grid .card{
+        flex:1 1 45%;
     }
 
     .avisos-hero h1{
@@ -951,7 +819,7 @@ footer p{
         text-align:left;
     }
 
-    .hero-grid-col{
+    .hero-grid div{
         flex:1;
         min-width:0px;
     }
